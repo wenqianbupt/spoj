@@ -1,5 +1,7 @@
 import sys
 
+import os
+
 
 def reverse_str(value):
     """
@@ -105,6 +107,9 @@ if __name__ == '__main__':
     first_line = sys.stdin.readline()
     count = int(first_line)
 
+    results = []
     for i in range(count):
-        line = sys.stdin.readline()[:-1]
-        print(get_next_palindrome(line))
+        line = sys.stdin.readline().strip()
+        results.append(get_next_palindrome(line))
+
+    print(os.linesep.join(results))
