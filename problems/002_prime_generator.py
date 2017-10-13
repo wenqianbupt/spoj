@@ -1,5 +1,5 @@
 import sys
-import math
+
 import os
 
 def get_prime_numbers_str(start_str, stop_str):
@@ -19,20 +19,16 @@ def get_prime_numbers_str(start_str, stop_str):
     num = start
     while num <= stop:
         if num == 1:
-            num += 1
-        elif num == 2 or num == 3 or num ==5:
-            result.append(str(num))
-            num += 1
-        elif num % 2 == 0:
-            num += 1
+            num +=1
+        elif num == 2:
+            result.append('2')
         else:
-            for n in range(3, int(math.sqrt(num))+1):
+            for n in range(2, num):
                 if num % n == 0:
-                    num += 1
                     break
             else:
                 result.append(str(num))
-                num += 1
+        num += 1
     result.append('')
     return result
 
