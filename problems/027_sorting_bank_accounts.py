@@ -14,8 +14,9 @@ if __name__ == '__main__':
         acc_num = int(acc_num_line)
         for n in range(acc_num):
             accounts.append(sys.stdin.readline().strip())
-        for k in sorted(Counter(accounts)):
-            results.append(k + ' ' + str(Counter(accounts)[k]))
+        acc_count = Counter(accounts)
+        for k in sorted(acc_count):
+            results.append(k + ' ' + str(acc_count[k]))
         results.append('')
         accounts = []
 
