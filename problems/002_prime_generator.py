@@ -53,12 +53,10 @@ if __name__ == '__main__':
     first_line = sys.stdin.readline()
     count = int(first_line)
 
-    numbers = []
     results = []
 
     for i in range(count):
-        line = sys.stdin.readline().strip().split()
-        numbers = chain(numbers, get_prime_numbers(int(line[0]), int(line[1])))
-    for idx in numbers:
-        results.append(str(idx))
+        start, stop = tuple(map(int, sys.stdin.readline().strip().split()))
+        results = chain(results, map(str, get_prime_numbers(start, stop)))
+        results = chain(results, [''])
     print(os.linesep.join(results))
