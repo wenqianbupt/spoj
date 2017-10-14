@@ -57,6 +57,6 @@ if __name__ == '__main__':
 
     for i in range(count):
         start, stop = map(int, sys.stdin.readline().strip().split())
-        results.append(map(str, get_prime_numbers(start, stop)))
+        results.extend(map(str, get_prime_numbers(start, stop)))
         results.append('')
     print(os.linesep.join(results))
