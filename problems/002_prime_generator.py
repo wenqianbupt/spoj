@@ -60,7 +60,6 @@ if __name__ == '__main__':
 
     for i in range(count):
         line = sys.stdin.readline()[:-1].split()
-        # results += iter(get_prime_numbers_str(line[0], line[1]))
         numbers = chain(numbers, get_prime_numbers(int(line[0]), int(line[1])))
     for idx in numbers:
         results.append(str(idx))
