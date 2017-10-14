@@ -56,7 +56,7 @@ if __name__ == '__main__':
     results = []
 
     for i in range(count):
-        start, stop = tuple(map(int, sys.stdin.readline().strip().split()))
-        results = chain(results, map(str, get_prime_numbers(start, stop)))
-        results = chain(results, [''])
+        start, stop = map(int, sys.stdin.readline().strip().split())
+        results.append(map(str, get_prime_numbers(start, stop)))
+        results.append('')
     print(os.linesep.join(results))
