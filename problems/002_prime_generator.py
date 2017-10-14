@@ -1,7 +1,6 @@
 import sys
 import math
 import os
-from itertools import chain
 
 
 def get_prime_numbers(start, stop):
