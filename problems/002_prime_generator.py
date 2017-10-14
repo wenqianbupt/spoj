@@ -27,7 +27,6 @@ def get_prime_numbers(start, stop):
         return result
     elif start == 1 and stop == 2:
         result.append(2)
-        result.append(None)
         return result
     elif start == 1 and stop > 2:
         start += 1
@@ -47,7 +46,6 @@ def get_prime_numbers(start, stop):
                     break
             else:
                 result.append(num)
-    result.append(None)
     return result
 
 
@@ -59,7 +57,7 @@ if __name__ == '__main__':
     results = []
 
     for i in range(count):
-        line = sys.stdin.readline()[:-1].split()
+        line = sys.stdin.readline().strip().split()
         numbers = chain(numbers, get_prime_numbers(int(line[0]), int(line[1])))
     for idx in numbers:
         results.append(str(idx))
