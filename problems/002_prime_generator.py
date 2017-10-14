@@ -27,7 +27,7 @@ def get_prime_numbers(start, stop):
         return result
     elif start == 1 and stop == 2:
         result.append(2)
-        result.append('')
+        result.append(None)
         return result
     elif start == 1 and stop > 2:
         start += 1
@@ -47,7 +47,7 @@ def get_prime_numbers(start, stop):
                     break
             else:
                 result.append(num)
-    result.append('')
+    result.append(None)
     return result
 
 
