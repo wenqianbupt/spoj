@@ -24,15 +24,20 @@ def fun(a, b, operator):
 
 def get_result(left, right, values, operator):
     right = operator + right
+    max_len = max(len(left), len(right), len(values[-1]))
+    print('')
+    print(left.rjust(max_len))
+    print(right.rjust(max_len))
+    print(''.rjust(max_len, '-'))
+
     if len(values) == 1:
-        max_len = max(len(left), len(right), len(values[0]))
-        print('')
-        print(left.rjust(max_len))
-        print(right.rjust(max_len))
-        print(''.rjust(max_len, '-'))
         print(values[0].rjust(max_len))
     else:
-        pass
+        for i in range(len(values) - 1):
+            values[i] = values[i].ljust(int(len(values[i]) + i), ' ')
+            print(values[i].rjust(max_len))
+        print(''.rjust(max_len, '-'))
+        print(values[-1].rjust(max_len))
 
 if __name__ == '__main__':
     first_line = sys.stdin.readline()
