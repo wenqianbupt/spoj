@@ -9,18 +9,18 @@ if __name__ == '__main__':
 
     for i in range(count):
         line = sys.stdin.readline().strip()
-        str = ''
+        s = ''
         operators = []
         for n in range(len(line)):
             if line[n].islower():
-                str += line[n]
+                s += line[n]
             elif line[n] == '+' or line[n] == '-' or line[n] == '*' or line[n] == '/' or line[n] == '^':
                 operators.append(line[n])
             elif line[n] == ')':
-                str += operators[-1]
+                s += operators[-1]
                 operators.pop()
 
-        results.append(str)
+        results.append()
 
     print(os.linesep.join(results))
 
