@@ -20,7 +20,7 @@ if __name__ == '__main__':
                 s += operators[-1]
                 operators.pop()
 
-        results.append()
+        results.append(s)
 
     print(os.linesep.join(results))
 
