@@ -1,0 +1,6 @@
+id, name, class, score
+1, Angela, c1, 44
+2, Amy, c1, 67
+3, Cindy, c2, 99
+4, David, c1, 67
+5, Helen, c2, 89
